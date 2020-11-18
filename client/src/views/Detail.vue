@@ -27,7 +27,7 @@
 
             <!-- 版权声明 -->
             <div class="copy clearfix">
-              <p>本站所有文章在CC BY-NC-SA 4.0 协议下授权 这意味着您可以自由地转载、修改</p>
+              <p>本站所有文章在CC BY-NC-SA 4.0 协议下授权 这意味着您可以自由地转载</p>
               <p>但您<span>必须</span>遵守本站规定：</p>
               <p>转载时<span>必须</span>给出适当署名，并提供本站原文链接</p>
               <p>您<span>不得</span>将本站内容用于商业目的</p>
@@ -90,7 +90,6 @@
       const local = location.pathname;
       if (local) {
         axios.get('/api' + local).then(res => {
-          console.log(res);
           if (res.status === 200) {
             const data = res.data.data;
             const date = data.createdAt.split('T')[0];

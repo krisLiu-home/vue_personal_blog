@@ -46,7 +46,6 @@
     created() {
       axios.get('/api/blog/all').then(res => {
         const data = res.data.data;
-        console.log(data);
         data.data.forEach(item => {
           item.link = '/blog/' + item.id;
         });

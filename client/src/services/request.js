@@ -15,7 +15,6 @@ export default function () {
       }
     });
   }
-  console.log();
 
 
   instance.interceptors.response.use(function (resp) {

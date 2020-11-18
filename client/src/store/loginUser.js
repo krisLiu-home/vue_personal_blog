@@ -23,7 +23,6 @@ export default {
     async login({ commit }, {loginId, loginPwd}) {
       commit('setIsLoading', true);
       const result = await loginSer.login(loginId, loginPwd);
-      console.log(result, 'login')
       commit('setData', result.data.data);
       commit('setIsLoading', false);
     },

@@ -4,21 +4,14 @@ import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
 import request from './services/request'
-import './plugin/axios'
 import '@/assets/css/main.css'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'animate.css'
 
-import * as loginSer from './services/loginServices'
-// loginSer.login('13933616583', 'wohaizaidengni.1').then(resp=> {
-//   console.log(resp);
-// });
-
-// loginSer.WhoAmI().then(resp => {
-//   console.log(resp);
-// })
+document.title = "键盘钢琴家"
 
 window.request = request();
+window.axios = request();
 
 store.dispatch('loginUser/whoAmI');  // 在网站刚启动时就要用token换取信息
 
